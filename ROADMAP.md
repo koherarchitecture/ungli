@@ -40,5 +40,5 @@ The scaffold cannot yet run the domain guides in METHOD.md, one small model for 
 - **A finder for Hindi**, with a multilingual encoder from the README's table. *Condition:* a hand-keyed Hindi set, written or checked by a speaker of Hindi.
 - **Hinglish in Roman script.** *Condition:* the Hindi finder has shipped, and a hand-keyed Hinglish set exists.
 - **A base model trained on less text taken without permission**, the open problem in METHOD.md. *Condition:* a decision to train one.
-- **A trained domain guide**, one for each aspect of a chosen field. *Condition:* a field is chosen, and people who know it have labelled question and passage pairs for each aspect. Any guide Koher trains names no animal product in its data, a rule Koher keeps for its own work and examples; the README leaves the choice of data to whoever applies Synapse.
+- **A trained domain guide**, one for each aspect of a chosen field. *Condition:* a field is chosen, and people who know it have labelled question and passage pairs for each aspect. Any guide Koher trains names no animal product in its data, a rule Koher keeps for its own work and examples; the README leaves the choice of data to whoever applies ungli.
 - **2.0.0.** No major version is planned (see VERSIONING.md).
