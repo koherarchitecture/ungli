@@ -1,6 +1,6 @@
 <h1 align="center">ungli</h1>
 
-<p align="center"><strong>Layers of narrow small models: a method for using AI in which no model writes a word.</strong></p>
+<p align="center"><strong>Layers of NSMs (Narrow Small Models): a method for using AI in which no model writes a word.</strong></p>
 
 <p align="center">
   <a href="LICENSE-METHOD.md"><img src="https://img.shields.io/badge/method-CC--BY--4.0-373E3C" alt="method licence CC-BY-4.0"></a>
@@ -13,7 +13,7 @@
 
 The method is Prayas Abhinav's. He first set it out on 24 September 2026, and it is published by Koher. Its name is from the Hindi *ungli rakhna*, to put a finger on the exact spot, which is all a model in it does: it lays a finger on one passage, one item or one number, or on nothing, and code acts. A model here is narrow by the size of its answer, not by its own size. Until 13 November 2026 the method was called Synapse; the old address of this repository still works.
 
-**Design with it in the builder:** [ungli.syntax.prayasabhinav.net](https://ungli.syntax.prayasabhinav.net). Lay a task out as a line of steps, each plain code or a narrow small model (NSM), and read beside each NSM what the nearest NSMs already built were measured to do. The kind of model it builds is set out as a syntax: [the NSM syntax](https://syntax.prayasabhinav.net/nsm/). The method itself, in his words, is in **[METHOD.md](METHOD.md)**. This page gives its shape, two working models built on it, a small scaffold in code, and how to cite it.
+**Design with it in the builder:** [ungli.syntax.prayasabhinav.net](https://ungli.syntax.prayasabhinav.net). Lay a task out as a line of steps, each plain code or an NSM (Narrow Small Model), and read beside each NSM what the nearest NSMs already built were measured to do. The kind of model it builds is set out as a syntax: [the NSM syntax](https://syntax.prayasabhinav.net/nsm/). The method itself, in his words, is in **[METHOD.md](METHOD.md)**. This page gives its shape, two working models built on it, a small scaffold in code, and how to cite it.
 
 <p align="center"><img src="assets/layers.svg" width="860" alt="A case goes to several small models, each taking one small decision and answering with a number or nothing. Code checks every answer. The top call is made only from a list written in advance, and the words a person reads were written by people. Any don't-know goes to a person, or to rules people wrote in advance."></p>
 
@@ -82,7 +82,7 @@ ungli uses semantic versioning from the release after 1.5: see [VERSIONING.md](V
 
 Use GitHub's *Cite this repository* button, which reads `CITATION.cff`, or:
 
-> Abhinav, P. (2026). *ungli: layers of narrow small models* (Version 1.5). Koher. https://github.com/koherarchitecture/ungli
+> Abhinav, P. (2026). *ungli: layers of NSMs (Narrow Small Models)* (Version 1.5). Koher. https://github.com/koherarchitecture/ungli
 
 If you cite a model built on it, cite rai or RAM through their own `CITATION.cff` as well. The idea underneath, Split-Domain Cognition, is at https://splitdomaincognition.org.
 
