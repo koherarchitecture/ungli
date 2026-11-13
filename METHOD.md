@@ -36,7 +36,7 @@ Then build the model.
 
 ## What runs the layers
 
-Code runs the layers, never a model. A table written by people says which layers each kind of case goes through, in what order, and where a case goes when a layer does not know. One table can hold every small model in a system, so each model is loaded once and shared; that table is the router. A model that plans the order, or writes a query, a sub-question or a step for another model, is outside Synapse whatever its size, because it would take over what the fifth reason above keeps: which operation runs, and when.
+Code runs the layers, never a model. A table written by people says which layers each kind of case goes through, in what order, and where a case goes when a layer does not know. One table can hold every small model in a system, so each model is loaded once and shared; that table is the router. A model that plans the order, or writes a query, a sub-question or a step for another model, is outside ungli whatever its size, because it would take over what the fifth reason above keeps: which operation runs, and when.
 
 A harder job does not call for a bigger model. It usually means the function has not yet been broken into singular operations. Semantic search sounds like a job for a large model; it is one small operation. When a text is too long for a reader to read whole, such as a long office file or a collection of documents, and a person asks about one matter in it in their own words, a finder answers with the number of the passage closest in meaning to those words, or nothing. The words need not match: *ink for the printer* finds *the printer cartridges are over*. The finder is an encoder of 110 million parameters. The reader then asks its one fixed question of that passage only.
 
