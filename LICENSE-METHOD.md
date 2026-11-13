@@ -4,6 +4,6 @@ The method (`METHOD.md`), this repository's `README.md` and the figures in `asse
 
 You may share and adapt them for any purpose, provided you give appropriate credit, link to the licence, and indicate if changes were made.
 
-**Credit as:** Synapse: layers of small models, by Prayas Abhinav, published by Koher (https://github.com/koherarchitecture/synapse).
+**Credit as:** ungli: layers of narrow small models, by Prayas Abhinav, published by Koher (https://github.com/koherarchitecture/ungli).
 
 The scaffold code in `scaffold/` is licensed separately under the GNU Affero General Public License v3.0; see `LICENSE`.

@@ -1,4 +1,4 @@
-# Synapse: the method
+# ungli: the method
 
 *Prayas Abhinav, 20 October 2026. Version 1.5, 25 October 2026.*
 
@@ -65,7 +65,7 @@ Small also describes a smaller copyright theft. A small model is trained on less
 
 ## Where it does not fit
 
-Synapse does not fit generation jobs.
+ungli does not fit generation jobs.
 
 ## What goes wrong without it
 

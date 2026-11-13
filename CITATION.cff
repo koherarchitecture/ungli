@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this method, please cite it as below."
-title: "Synapse: layers of small models"
+title: "ungli: layers of narrow small models"
 type: software
 authors:
   - family-names: "Abhinav"
@@ -9,10 +9,11 @@ authors:
 version: "1.5"
 date-released: "2026-10-25"
 license: CC-BY-4.0
-repository-code: "https://github.com/koherarchitecture/synapse"
-url: "https://github.com/koherarchitecture/synapse"
+repository-code: "https://github.com/koherarchitecture/ungli"
+url: "https://github.com/koherarchitecture/ungli"
 keywords:
   - small models
+  - narrow small models
   - split-domain cognition
   - human in the loop
   - abstention

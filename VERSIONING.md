@@ -1,6 +1,6 @@
 # Versioning
 
-Synapse uses semantic versioning, MAJOR.MINOR.PATCH, from the release after 1.5. The version number says whether either of two things a person can build on has changed.
+ungli uses semantic versioning, MAJOR.MINOR.PATCH, from the release after 1.5. The version number says whether either of two things a person can build on has changed.
 
 The first is the method's rules. Every model answers with a number or nothing. Code checks every answer, and code, not a model, runs the layers. A case no layer can settle goes to a person or to rules written in advance. Every sentence a person reads was written by people. Generation is outside the method. These rules are stated in [METHOD.md](METHOD.md) and in this repository's README.
 

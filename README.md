@@ -1,6 +1,6 @@
-<h1 align="center">Synapse</h1>
+<h1 align="center">ungli</h1>
 
-<p align="center"><strong>Layers of small models: a method for using AI in which no model writes a word.</strong></p>
+<p align="center"><strong>Layers of narrow small models: a method for using AI in which no model writes a word.</strong></p>
 
 <p align="center">
   <a href="LICENSE-METHOD.md"><img src="https://img.shields.io/badge/method-CC--BY--4.0-373E3C" alt="method licence CC-BY-4.0"></a>
@@ -11,7 +11,7 @@
 
 ---
 
-The method is Prayas Abhinav's. He first set it out on 24 September 2026, and it is published by Koher. The method itself, in his words, is in **[METHOD.md](METHOD.md)**. This page gives its shape, two working models built on it, a small scaffold in code, and how to cite it.
+The method is Prayas Abhinav's. He first set it out on 24 September 2026, and it is published by Koher. Its name is from the Hindi *ungli rakhna*, to put a finger on the exact spot, which is all a model in it does: it lays a finger on one passage, one item or one number, or on nothing, and code acts. A model here is narrow by the size of its answer, not by its own size. Until 13 November 2026 the method was called Synapse; the old address of this repository still works. The method itself, in his words, is in **[METHOD.md](METHOD.md)**. This page gives its shape, two working models built on it, a small scaffold in code, and how to cite it.
 
 <p align="center"><img src="assets/layers.svg" width="860" alt="A case goes to several small models, each taking one small decision and answering with a number or nothing. Code checks every answer. The top call is made only from a list written in advance, and the words a person reads were written by people. Any don't-know goes to a person, or to rules people wrote in advance."></p>
 
@@ -74,13 +74,13 @@ For Hindi, the multilingual encoders are the place to start; Hinglish written in
 
 ## Versions
 
-Synapse uses semantic versioning from the release after 1.5: see [VERSIONING.md](VERSIONING.md). What each coming version adds, and how it is checked, is in [ROADMAP.md](ROADMAP.md).
+ungli uses semantic versioning from the release after 1.5: see [VERSIONING.md](VERSIONING.md). What each coming version adds, and how it is checked, is in [ROADMAP.md](ROADMAP.md).
 
 ## Cite it
 
 Use GitHub's *Cite this repository* button, which reads `CITATION.cff`, or:
 
-> Abhinav, P. (2026). *Synapse: layers of small models* (Version 1.5). Koher. https://github.com/koherarchitecture/synapse
+> Abhinav, P. (2026). *ungli: layers of narrow small models* (Version 1.5). Koher. https://github.com/koherarchitecture/ungli
 
 If you cite a model built on it, cite rai or RAM through their own `CITATION.cff` as well. The idea underneath, Split-Domain Cognition, is at https://splitdomaincognition.org.
 
