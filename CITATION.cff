@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this method, please cite it as below."
-title: "ungli: layers of NSMnum (Narrow Small Models)"
+title: "ungli: layers of NSMnum (Narrow Small Models, numeric)"
 type: software
 authors:
   - family-names: "Abhinav"
@@ -13,7 +13,7 @@ repository-code: "https://github.com/koherarchitecture/ungli"
 url: "https://github.com/koherarchitecture/ungli"
 keywords:
   - small models
-  - NSMnum (Narrow Small Models)
+  - NSMnum (Narrow Small Models, numeric)
   - split-domain cognition
   - human in the loop
   - abstention
