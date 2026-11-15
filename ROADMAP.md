@@ -15,6 +15,7 @@ A version that changes a layer ships only if wrong yes stays at zero on every ex
 - `runs` and `narrowed` move into `layers.py`, which needs no packages, so `scaffold/test_layers.py` can check them with stand-in layers. `finder.py` still exports both, so `from finder import narrowed` keeps working.
 - `scripts/check.sh` skips a virtual environment inside the tree, whose installed packages contain strings its secret-key check mistakes for keys.
 - The README's long sentence on `run` is split in two.
+- The short form NSM becomes NSMnum everywhere, to avoid a collision with the Natural Semantic Metalanguage (NSM) in linguistics; the full name, Narrow Small Model, is unchanged. Already on `main` from 15 November 2026; the README says why.
 
 The test must fail on a deliberately broken `narrowed` and pass on the real one, and the fresh-clone test must pass with a virtual environment inside the clone.
 
