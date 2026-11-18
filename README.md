@@ -76,6 +76,25 @@ For Hindi, the multilingual encoders are the place to start; Hinglish written in
 
 `scripts/check.sh` runs before every release: it refuses without `METHOD.md`, when a check fails, or when anything in the tree looks like a key.
 
+## The ungli skill for Claude Code
+
+`skill/` is a Claude Code skill built from Prayas Abhinav's records:
+
+- this method, the NSMnum syntax and the lessons from models built so far;
+- the design records of those models, and Split-Domain Cognition's canon;
+- the Museum of Vestigial Desire's texts on intelligence, and a glossary of the terms.
+
+It answers questions from those records and says which file each point comes from. For a task, it asks one question at a time, in the order of NSMnum's parts, until every step is small enough for a Narrow Small Model; the person asking does the breaking down, and the skill checks each step against the rules.
+
+With Claude Code installed:
+
+```
+git clone https://github.com/koherarchitecture/ungli
+bash ungli/skill/install.sh
+```
+
+The script copies the skill to `~/.claude/skills/ungli/` and starts Claude Code with `/ungli`. Close any open Claude Code session first: skills load only when a session starts. It needs bash: macOS, Linux, or WSL on Windows.
+
 ## Versions
 
 ungli uses semantic versioning from the release after 1.5: see [VERSIONING.md](VERSIONING.md). What each coming version adds, and how it is checked, is in [ROADMAP.md](ROADMAP.md).
@@ -90,4 +109,4 @@ If you cite a model built on it, cite rai or RAM through their own `CITATION.cff
 
 ## Licence
 
-The method (`METHOD.md`, this README and the figures) is under the Creative Commons Attribution 4.0 International licence: see `LICENSE-METHOD.md`. The scaffold code is under the GNU Affero General Public License v3.0: see `LICENSE`.
+The method (`METHOD.md`, this README and the figures) is under the Creative Commons Attribution 4.0 International licence: see `LICENSE-METHOD.md`. The scaffold code is under the GNU Affero General Public License v3.0: see `LICENSE`. The files under `skill/context/` are copies of their sources and keep those sources' terms.

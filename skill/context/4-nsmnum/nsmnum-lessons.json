@@ -1,0 +1,88 @@
+[
+ {
+  "when": {},
+  "from": "aadha",
+  "text": "Before trusting a gap between two versions, measure how much one version moves by itself: two soups of the same aadha arm differed by 13 to 16 lines on the large sets, and one seed moved rai's count by about thirty answers."
+ },
+ {
+  "when": {
+   "reads": [
+    "a sentence",
+    "two sentences",
+    "a passage",
+    "a whole text"
+   ]
+  },
+  "from": "aadha",
+  "text": "Put the same test to a hosted model before building: on 603 sentences I had marked, Haiku and Sonnet matched or beat aadha on the good noise, and aadha was ahead on only one boundary, abstract nonsense."
+ },
+ {
+  "when": {
+   "does": [
+    "points"
+   ]
+  },
+  "from": "ram",
+  "text": "Compare with a parser or a rule first: on plain notings a sentence parser alone got 162 of 178 acts where RAM got 178."
+ },
+ {
+  "when": {
+   "does": [
+    "scores"
+   ]
+  },
+  "from": "beam-thread",
+  "text": "Compare with a few lines of plain code: Beam's thread model picked the same as plain code 88% to 100% of the time, so the model added nothing."
+ },
+ {
+  "when": {
+   "does": [
+    "scores",
+    "chooses"
+   ]
+  },
+  "from": "beam-maze",
+  "text": "Before training, set the weights at full strength and measure how far the choices can move what they are meant to change: the maze maker could move the walk only from 41 to 32 key presses, so I scrapped it."
+ },
+ {
+  "when": {
+   "learns from": [
+    "rows a model wrote",
+    "another model's labels"
+   ]
+  },
+  "from": "rai",
+  "text": "If a model wrote the test rows, a high score says little. Every test answer for rai was written in Claude Code, and the argument models had no human test set; measure on people's own writing before trusting a figure."
+ },
+ {
+  "when": {
+   "reads": [
+    "a second of sound"
+   ],
+   "runs on": [
+    "a Raspberry Pi 5"
+   ]
+  },
+  "from": "hoja-scorer",
+  "text": "Time it on the Pi itself: the uncut audio encoder took 2,070 ms a window on a Pi 5, the encoder cut to two seconds 65 ms on a Mac mini. The microphone picks up the fan, so fit the model with the fan running."
+ },
+ {
+  "when": {
+   "does": [
+    "spots"
+   ]
+  },
+  "from": "paarakhi",
+  "text": "The only figure is a published one on isolated English commands; words inside running speech, and Hindi or Hinglish, are not measured."
+ },
+ {
+  "when": {
+   "answers with": [
+    "yes or no",
+    "a kind"
+   ]
+  },
+  "from": "kahen",
+  "text": "Count what always giving the commonest answer scores: kahen got 108 of 179, and always answering 'the point' got 107."
+ }
+]

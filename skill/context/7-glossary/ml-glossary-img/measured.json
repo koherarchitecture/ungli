@@ -1,0 +1,143 @@
+{
+ "model": "Xenova/bge-base-en-v1.5",
+ "measured": "2026-10-27T09:53:31.482Z",
+ "tokens": [
+  {
+   "sentence": "The umpire gave the batter out.",
+   "tokens": [
+    "the",
+    "umpire",
+    "gave",
+    "the",
+    "batter",
+    "out",
+    "."
+   ]
+  },
+  {
+   "sentence": "The decision was unquestionable.",
+   "tokens": [
+    "the",
+    "decision",
+    "was",
+    "un",
+    "##quest",
+    "##ion",
+    "##able",
+    "."
+   ]
+  }
+ ],
+ "search": {
+  "query": "ink for the printer",
+  "results": [
+   {
+    "passage": "The printer cartridges are over.",
+    "similarity": 0.689,
+    "sharesAWord": true
+   },
+   {
+    "passage": "The printer in room 4 is jammed.",
+    "similarity": 0.644,
+    "sharesAWord": true
+   },
+   {
+    "passage": "Heavy rain is expected in Ahmedabad tomorrow.",
+    "similarity": 0.359,
+    "sharesAWord": false
+   },
+   {
+    "passage": "The umpire gave the batter out.",
+    "similarity": 0.423,
+    "sharesAWord": false
+   },
+   {
+    "passage": "Sign in ink, not pencil, on the form.",
+    "similarity": 0.624,
+    "sharesAWord": true
+   },
+   {
+    "passage": "The new leaves of the groundnut are turning yellow.",
+    "similarity": 0.416,
+    "sharesAWord": false
+   }
+  ]
+ },
+ "map": {
+  "points": [
+   {
+    "group": "printer",
+    "sentence": "The printer cartridges are over.",
+    "x": -0.3892,
+    "y": -0.009
+   },
+   {
+    "group": "printer",
+    "sentence": "The printer in room 4 is jammed.",
+    "x": -0.4675,
+    "y": 0.0399
+   },
+   {
+    "group": "printer",
+    "sentence": "We need toner before the report is printed.",
+    "x": -0.289,
+    "y": 0.1303
+   },
+   {
+    "group": "rain",
+    "sentence": "Heavy rain is expected in Ahmedabad tomorrow.",
+    "x": 0.4336,
+    "y": -0.0638
+   },
+   {
+    "group": "rain",
+    "sentence": "Carry an umbrella, the monsoon has started.",
+    "x": 0.3607,
+    "y": -0.0072
+   },
+   {
+    "group": "rain",
+    "sentence": "The roads near the river flooded overnight.",
+    "x": 0.2603,
+    "y": 0.0839
+   },
+   {
+    "group": "cricket",
+    "sentence": "The umpire gave the batter out.",
+    "x": -0.0671,
+    "y": -0.3872
+   },
+   {
+    "group": "cricket",
+    "sentence": "The bowler took three wickets in the last over.",
+    "x": -0.0133,
+    "y": -0.4458
+   },
+   {
+    "group": "cricket",
+    "sentence": "India needs forty runs from five overs.",
+    "x": 0.0455,
+    "y": -0.2951
+   },
+   {
+    "group": "crops",
+    "sentence": "The new leaves of the groundnut are turning yellow.",
+    "x": 0.0248,
+    "y": 0.2684
+   },
+   {
+    "group": "crops",
+    "sentence": "Iron shortage shows between the veins of young leaves.",
+    "x": 0.0591,
+    "y": 0.4267
+   },
+   {
+    "group": "crops",
+    "sentence": "The wheat needs nitrogen before it flowers.",
+    "x": 0.0421,
+    "y": 0.2589
+   }
+  ],
+  "varianceShown": 0.317
+ }
+}

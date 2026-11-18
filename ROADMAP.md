@@ -18,6 +18,8 @@ A version that changes a layer ships only if wrong yes stays at zero on every ex
 - The README says how NSMnum is said aloud: en-ess-em-num (एन-एस-एम-नम), for one or many.
 - The short form NSM becomes NSMnum everywhere, to avoid a collision with the Natural Semantic Metalanguage (NSM) in linguistics; the full name becomes Narrow Small Model (numerating), so that each part stands for a word. Already on `main` from 15 November 2026; the README says why.
 
+- `skill/`: the ungli skill for Claude Code, built from Prayas Abhinav's records, with an install script that puts it in place and starts Claude Code with it (18 November 2026). It answers from those records and, given a task, asks one question at a time until the task is broken into steps an NSMnum can do.
+
 The test must fail on a deliberately broken `narrowed` and pass on the real one, and the fresh-clone test must pass with a virtual environment inside the clone.
 
 ## 1.6.0: smaller encoders for the finder

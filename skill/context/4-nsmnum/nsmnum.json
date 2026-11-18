@@ -1,0 +1,756 @@
+{
+ "name": "NSMnum",
+ "read_from": "ungli",
+ "slug": "nsmnum",
+ "breaks_up": "an NSMnum (Narrow Small Model [numerating]): one that does a single job and answers with a kind, a span, an item, a number or codes, never with sentences, and leaves the decision to code; narrow is the size of its answer, not of the model",
+ "left_out": "A model that writes. Anything that writes text is not an NSMnum, and an NSMnum never starts from such a model or is taught by one: an NSMnum answers with a kind, a span, an item, a number or codes, and code decides what follows. Also left out: what the NSMnum is for in the world, its name, and the keys, which stay with the person who keyed them.",
+ "note": "NSMnum stands for Narrow Small Model (numerating); num is for numerating, because all this kind of model does is name a number: of a passage, of an item on a list written in advance, or none. I changed its short form from NSM to NSMnum on 15 November 2026 to avoid a collision: NSM is already the Natural Semantic Metalanguage, Anna Wierzbicka and Cliff Goddard's theory of meaning in linguistics, and the other short forms I tried were taken too. The same day the full name, until then Narrow Small Model, became Narrow Small Model (numerating), so that each part of NSMnum stands for a word. NSMnum is both singular and plural, written and said the same: one NSMnum, three NSMnum, layers of NSMnum, the nearest NSMnum already built; never NSMnums. Said aloud: en-ess-em-num (एन-एस-एम-नम), four syllables, the letters N, S and M and then num as in number, for one or many.",
+ "element_types": [
+  {
+   "name": "does",
+   "holds": "one",
+   "need": "essential",
+   "description": "The one thing the model does. A larger task is split into steps first, each done by its own model or by code.",
+   "elements": [
+    {
+     "name": "sorts",
+     "description": "puts each thing it reads into one of a few kinds set in advance",
+     "gives": "It puts each thing it reads into one of a few kinds set in advance."
+    },
+    {
+     "name": "points",
+     "description": "finds the part of what it reads that answers a question, or says there is none",
+     "gives": "It points at the part of what it reads that answers a question, or at nothing."
+    },
+    {
+     "name": "matches",
+     "description": "says which item on a list written in advance the thing it reads goes with",
+     "gives": "It says which item on a list written in advance the thing it reads goes with."
+    },
+    {
+     "name": "spots",
+     "description": "says which of a set of words or sounds recorded in advance occurred",
+     "gives": "It says which of the words or sounds recorded in advance occurred."
+    },
+    {
+     "name": "scores",
+     "description": "gives each option a number, and code takes the highest",
+     "gives": "It gives each option a number, and code takes the highest."
+    },
+    {
+     "name": "chooses",
+     "description": "picks codes from sets, one slot at a time",
+     "gives": "It picks codes from sets, one slot at a time."
+    },
+    {
+     "name": "counts",
+     "description": "says how many of one kind of thing there are in what it reads",
+     "gives": "It counts how many there are.",
+     "shown_by": {
+      "cite": "Lee and Lee, Journal of Real-Time Image Processing 21, 2024",
+      "url": "https://doi.org/10.1007/s11554-024-01531-8",
+      "what": "counts the people in a crowd from one image with 60,000 parameters, run on a Raspberry Pi 4."
+     }
+    },
+    {
+     "name": "notices the unusual",
+     "description": "says how far what it reads is from the normal it learnt, so code can flag the odd case",
+     "gives": "It says how unusual this is against what it learnt as normal.",
+     "shown_by": {
+      "cite": "Hammad, Iskandaryan and Trilles, Internet of Things 23, 2023",
+      "url": "https://doi.org/10.1016/j.iot.2023.100848",
+      "what": "an autoencoder trained on normal street-noise readings alone flags the odd ones, in 4 ms on an ESP32 microcontroller."
+     }
+    }
+   ]
+  },
+  {
+   "name": "reads",
+   "holds": "one",
+   "need": "essential",
+   "description": "What goes into the model each time it answers.",
+   "elements": [
+    {
+     "name": "a sentence",
+     "description": "one sentence at a time",
+     "gives": "It reads one sentence at a time."
+    },
+    {
+     "name": "two sentences",
+     "description": "two sentences read together, such as a question and its answer",
+     "gives": "It reads two sentences together."
+    },
+    {
+     "name": "a passage",
+     "description": "a few sentences up to a page, with a question about it",
+     "gives": "It reads a passage of a few sentences up to a page."
+    },
+    {
+     "name": "a whole text",
+     "description": "a whole text, shortened to fit the model's window",
+     "gives": "It reads a whole text, shortened to fit its window."
+    },
+    {
+     "name": "a second of sound",
+     "description": "a second or two of sound from a microphone",
+     "gives": "It hears a second or two of sound at a time."
+    },
+    {
+     "name": "numbers",
+     "description": "a few whole numbers that describe a situation",
+     "gives": "It reads a few numbers that describe a situation."
+    },
+    {
+     "name": "codes",
+     "description": "numbers that stand for words, never the words themselves",
+     "gives": "It reads only codes that stand for words, never the words."
+    },
+    {
+     "name": "a window of sensor readings",
+     "description": "a few seconds of readings from a sensor, such as a wrist's accelerometer",
+     "gives": "It reads a few seconds of readings from a sensor.",
+     "shown_by": {
+      "cite": "Di Leo, Biagetti, Falaschetti and Crippa, Sensors 25(12), 2025",
+      "url": "https://doi.org/10.3390/s25123831",
+      "what": "20 hand gestures sorted from a wrist accelerometer, 90.25% right, running on an STM32L4 microcontroller."
+     }
+    },
+    {
+     "name": "an image",
+     "description": "one photograph, or one frame from a camera",
+     "gives": "It reads one image.",
+     "shown_by": {
+      "cite": "Gulzar, Sustainability 15(3), 2023",
+      "url": "https://doi.org/10.3390/su15031906",
+      "what": "40 kinds of fruit sorted from photographs by MobileNetV2, kept as trained, with a new head on top, 99% right."
+     }
+    },
+    {
+     "name": "a short video clip",
+     "description": "a few seconds of moving picture",
+     "gives": "It reads a short video clip.",
+     "shown_by": {
+      "cite": "Kondratyuk, Yuan, Li and others, CVPR 2021",
+      "url": "https://doi.org/10.1109/cvpr46437.2021.01576",
+      "what": "sorts streaming video clips into actions on a phone, holding a small buffer instead of the whole clip."
+     }
+    }
+   ]
+  },
+  {
+   "name": "answers with",
+   "holds": "one",
+   "need": "essential",
+   "description": "What comes out. Every answer can also be none, which code reads as don’t know.",
+   "elements": [
+    {
+     "name": "a kind",
+     "description": "one of a few kinds set in advance",
+     "gives": "It answers with one of the kinds, or none."
+    },
+    {
+     "name": "yes or no",
+     "description": "one of two answers",
+     "gives": "It answers yes or no, or none."
+    },
+    {
+     "name": "a span",
+     "description": "where an answer starts and ends in what it read",
+     "gives": "It answers with where the answer starts and ends, or none."
+    },
+    {
+     "name": "an item",
+     "description": "one item from a list written in advance",
+     "gives": "It answers with one item from the list, or none."
+    },
+    {
+     "name": "a number",
+     "description": "a number for each option, which code compares",
+     "gives": "It answers with a number for each option."
+    },
+    {
+     "name": "codes",
+     "description": "codes chosen from sets, which code turns back into words",
+     "gives": "It answers with codes, which code turns back into words."
+    },
+    {
+     "name": "a box",
+     "description": "where the thing is in an image, as four numbers, or nothing",
+     "gives": "It answers with where the thing is, as a box of four numbers, or with nothing.",
+     "shown_by": {
+      "cite": "Zagitov, Chebotareva, Toschev and Magid, Computer Optics 48(2), 2024",
+      "url": "https://doi.org/10.18287/2412-6179-co-1343",
+      "what": "small detection models fine-tuned on a dataset of the authors' own, drawing boxes in real time on a Raspberry Pi 4B."
+     }
+    },
+    {
+     "name": "several kinds",
+     "description": "every kind set in advance that is present, not just one",
+     "gives": "It answers with every kind present, from a list set in advance.",
+     "shown_by": {
+      "cite": "Su, Tomioka, Zhao and Liu, Image and Vision Computing 147, 2024",
+      "url": "https://doi.org/10.1016/j.imavis.2024.105095",
+      "what": "marks every object present in each cell of an image at once, faster than 30 frames a second on a Raspberry Pi 4B's processor."
+     }
+    },
+    {
+     "name": "a mask",
+     "description": "which parts of an image belong to which kind, pixel by pixel",
+     "gives": "It answers with a mask: which parts of the image are which.",
+     "shown_by": {
+      "cite": "Chae, Kim and Heo, LCTES 2024",
+      "url": "https://doi.org/10.1145/3652032.3657576",
+      "what": "a tiny U-Net that marks which pixels belong to what, on a microcontroller board with 1 MB of memory."
+     }
+    },
+    {
+     "name": "a stretch of time",
+     "description": "where in the sound or video something starts and ends",
+     "gives": "It answers with where something starts and ends.",
+     "shown_by": {
+      "cite": "Lee, Kim, Song and others, IEEE Access 14, 2026",
+      "url": "https://doi.org/10.1109/access.2026.3737207",
+      "what": "gives where each sound event starts and ends in the audio, with 0.774 million parameters, on a device board."
+     }
+    },
+    {
+     "name": "points on a body",
+     "description": "where each joint of a person is, as numbers",
+     "gives": "It answers with where each joint is.",
+     "shown_by": {
+      "cite": "Wang, Li, Cai, Chen and Han, CVPR 2022",
+      "url": "https://doi.org/10.1109/cvpr52688.2022.01278",
+      "what": "finds the joints of every person in an image in real time on a phone's processor."
+     }
+    }
+   ]
+  },
+  {
+   "name": "starts from",
+   "holds": "one",
+   "need": "essential",
+   "description": "The trained model it begins from, before it learns the job.",
+   "elements": [
+    {
+     "name": "a pointing reader",
+     "description": "MiniLM, 33 million parameters, already trained to find the answer to a question in a passage"
+    },
+    {
+     "name": "an encoder with a new head",
+     "description": "an English encoder, such as MiniLM (33 million parameters) or DeBERTa, with a small new layer that picks one of a few kinds or says yes or no"
+    },
+    {
+     "name": "an adapter on a trained model",
+     "description": "a small set of added weights trained on top of a model already trained for a nearby job, a model that does not write text"
+    },
+    {
+     "name": "a multilingual encoder",
+     "description": "a small encoder that reads several languages, retrained on Indian languages"
+    },
+    {
+     "name": "a frozen audio encoder",
+     "description": "a model trained on sound, kept as it is, with a small scorer trained on top"
+    },
+    {
+     "name": "a keyword spotter",
+     "description": "a tiny encoder, tens to hundreds of thousands of parameters, that compares sound with recorded examples"
+    },
+    {
+     "name": "nothing",
+     "description": "no trained model: every weight is learnt from the start"
+    },
+    {
+     "name": "a few whole numbers",
+     "description": "no neural network: a handful of whole numbers that multiply the inputs"
+    },
+    {
+     "name": "a frozen image encoder",
+     "description": "a model already trained on many images, kept as it is, with a small new head trained on top",
+     "shown_by": {
+      "cite": "Gulzar, Sustainability 15(3), 2023",
+      "url": "https://doi.org/10.3390/su15031906",
+      "what": "40 kinds of fruit sorted from photographs by MobileNetV2, kept as trained, with a new head on top, 99% right."
+     }
+    }
+   ]
+  },
+  {
+   "name": "learns from",
+   "holds": "one",
+   "need": "essential",
+   "description": "Where the right answers it learns from come from.",
+   "elements": [
+    {
+     "name": "your own keys",
+     "description": "your own answers, given one item at a time on sheets that show no model’s answer"
+    },
+    {
+     "name": "a rule you stated",
+     "description": "answers code works out from a rule you stated in words"
+    },
+    {
+     "name": "rows a model wrote",
+     "description": "rows another model wrote for training, the right answer known from how each was made"
+    },
+    {
+     "name": "another model's labels",
+     "description": "labels another model gave, used on your word"
+    },
+    {
+     "name": "a dataset's labels",
+     "description": "the labels a public dataset came with"
+    },
+    {
+     "name": "comparisons you made",
+     "description": "which of two things you preferred, pair by pair, with no score asked of you",
+     "shown_by": {
+      "cite": "Hamilton, Tawn and Firth, Statistical Science 41(4), 2026",
+      "url": "https://doi.org/10.1214/25-sts1007",
+      "what": "rating items from pairwise comparisons alone, with the Bradley–Terry model."
+     }
+    },
+    {
+     "name": "the cases it asks you to label",
+     "description": "it picks the cases it is least sure of, and a person labels only those",
+     "shown_by": {
+      "cite": "Schröder, Müller, Niekler and Potthast, EACL 2023 demonstrations",
+      "url": "https://doi.org/10.18653/v1/2023.eacl-demo.11",
+      "what": "a small text classifier picks which cases a person labels next, 25 at a time."
+     }
+    },
+    {
+     "name": "normal cases only",
+     "description": "examples of the ordinary, with no labels; what does not fit is the unusual",
+     "shown_by": {
+      "cite": "Hammad, Iskandaryan and Trilles, Internet of Things 23, 2023",
+      "url": "https://doi.org/10.1016/j.iot.2023.100848",
+      "what": "an autoencoder trained on normal street-noise readings alone flags the odd ones, in 4 ms on an ESP32 microcontroller."
+     }
+    },
+    {
+     "name": "what it meets after it is set up",
+     "description": "it goes on learning on the device from new data, after it has been installed",
+     "shown_by": {
+      "cite": "Lin, Zhu, Chen and others, NeurIPS 2022",
+      "url": "https://doi.org/10.52202/068431-1667",
+      "what": "a model on a microcontroller with 256 KB of memory goes on training on new sensor data after it is installed."
+     }
+    }
+   ]
+  },
+  {
+   "name": "runs on",
+   "holds": "one",
+   "need": "essential",
+   "description": "Where the model answers once it is trained.",
+   "elements": [
+    {
+     "name": "a Raspberry Pi 5",
+     "description": "inside a toy or a game, on its processor, with nothing sent anywhere"
+    },
+    {
+     "name": "a phone's browser",
+     "description": "in the page itself, with nothing sent to a server"
+    },
+    {
+     "name": "a small server",
+     "description": "a server's processor with no graphics card, such as one with 1 CPU and 2 GB"
+    },
+    {
+     "name": "a graphics card",
+     "description": "a machine with a graphics card, such as an RTX 3060 with 12 GB"
+    },
+    {
+     "name": "a microcontroller",
+     "description": "a chip such as a Pico or an STM32, with a few hundred kilobytes of memory and no operating system",
+     "shown_by": {
+      "cite": "Di Leo, Biagetti, Falaschetti and Crippa, Sensors 25(12), 2025",
+      "url": "https://doi.org/10.3390/s25123831",
+      "what": "20 hand gestures sorted from a wrist accelerometer, 90.25% right, running on an STM32L4 microcontroller."
+     }
+    }
+   ]
+  },
+  {
+   "name": "data comes from",
+   "group": "data",
+   "holds": "one",
+   "need": "optional",
+   "helps": "says where the examples it trains on come from, as in the NSMnum already built",
+   "description": "Where the examples it trains on come from. Who gives the right answers is learns from.",
+   "elements": [
+    {
+     "name": "rows code made from templates",
+     "description": "rows that code builds from templates and word lists, with the answer known from how each was made"
+    },
+    {
+     "name": "texts a model wrote",
+     "description": "examples a language model wrote for training, read before use; the NSMnum itself never writes"
+    },
+    {
+     "name": "texts people wrote",
+     "description": "sentences or passages people wrote for some other purpose"
+    },
+    {
+     "name": "your own writing",
+     "description": "texts you wrote yourself, such as poems"
+    },
+    {
+     "name": "recordings made for it",
+     "description": "sound or sensor recordings made for this model, in the place it will run"
+    },
+    {
+     "name": "runs simulated by code",
+     "description": "games, mazes or other runs that code plays out to make examples"
+    },
+    {
+     "name": "pairs from a list written in advance",
+     "description": "pairs of items from a fixed list, such as a palette of blocks"
+    },
+    {
+     "name": "a public dataset",
+     "description": "examples someone else published, used only once you have agreed to the source. No NSMnum here has trained on one directly: rai's teacher reader read SQuAD 2.0 (126,689 rows) before teaching rai"
+    }
+   ]
+  },
+  {
+   "name": "how many",
+   "group": "data",
+   "holds": "one",
+   "need": "optional",
+   "helps": "says how many examples it needs, so the keying can be planned",
+   "description": "How many examples it trains on.",
+   "elements": [
+    {
+     "name": "a few dozen",
+     "description": "under a hundred, such as fifty poems keyed one by one"
+    },
+    {
+     "name": "a few hundred",
+     "description": "a hundred to a thousand"
+    },
+    {
+     "name": "a few thousand",
+     "description": "a thousand to ten thousand"
+    },
+    {
+     "name": "tens of thousands",
+     "description": "ten thousand or more, usually made rather than keyed one by one"
+    }
+   ]
+  },
+  {
+   "name": "tested on",
+   "group": "data",
+   "holds": "one",
+   "need": "optional",
+   "helps": "says what it is measured on and never trains on",
+   "description": "What it is tested on, kept out of everything it trains on.",
+   "elements": [
+    {
+     "name": "a held-out set from the same source",
+     "description": "examples like the training ones, never trained on"
+    },
+    {
+     "name": "your keys, given blind",
+     "description": "examples you marked on sheets before any model saw them"
+    },
+    {
+     "name": "sets keyed by hand",
+     "description": "sets marked by hand after they were written"
+    },
+    {
+     "name": "simulated runs",
+     "description": "runs that code plays out, compared with what plain code would do"
+    },
+    {
+     "name": "a published figure",
+     "description": "a result someone else published for the same kind of model; not a measurement of yours"
+    },
+    {
+     "name": "what people give it in use",
+     "description": "what people type, say or show it once it is set up. No NSMnum here has been measured on it yet; rai's record says it was not measured on answers typed by people who use it"
+    }
+   ]
+  },
+  {
+   "name": "code takes",
+   "group": "code",
+   "holds": "one",
+   "need": "optional",
+   "helps": "says what code works on, as in the NSMnum already built",
+   "description": "What the code works on. A step of plain code beside the NSMnum; each element names the NSMnum in ungli where code already does it.",
+   "elements": [
+    {
+     "name": "one NSMnum's answer",
+     "description": "the number, item or span one NSMnum gave, or its none",
+     "shown_in": "rai",
+     "how": "the phrase rai's reader pointed at"
+    },
+    {
+     "name": "several NSMnum' answers",
+     "description": "what more than one NSMnum gave for the same case",
+     "shown_in": "coherence-v2",
+     "how": "the pointers' answers for every claim"
+    },
+    {
+     "name": "the input itself",
+     "description": "the text, sound or numbers before any NSMnum reads them",
+     "shown_in": "paarakhi",
+     "how": "the sound, before the word spotter hears it"
+    },
+    {
+     "name": "a list written in advance",
+     "description": "words, rules or a table people wrote before any case came",
+     "shown_in": "ram",
+     "how": "the doers in name only, such as the competent authority"
+    }
+   ]
+  },
+  {
+   "name": "code does",
+   "group": "code",
+   "holds": "one",
+   "need": "optional",
+   "helps": "says the one thing code does with the NSMnum's answer",
+   "description": "The one thing the code does with it. A step of plain code beside the NSMnum; each element names the NSMnum in ungli where code already does it.",
+   "elements": [
+    {
+     "name": "checks",
+     "description": "keeps an answer only if it is valid, and counts anything else as none",
+     "shown_in": "rai",
+     "how": "a phrase it points at must appear, word for word, in what was typed"
+    },
+    {
+     "name": "looks up",
+     "description": "finds the answer in a list written in advance",
+     "shown_in": "ram",
+     "how": "refuses a doer in name only from short lists anyone can read"
+    },
+    {
+     "name": "counts",
+     "description": "tallies answers",
+     "shown_in": "rai",
+     "how": "a tally of seven notions of completeness"
+    },
+    {
+     "name": "compares with a line",
+     "description": "turns a number into yes or no at a line people chose",
+     "shown_in": "boardgame-clash",
+     "how": "the table of properties decides which pairs a teacher sees"
+    },
+    {
+     "name": "routes",
+     "description": "sends a case to the next layer, or to a person",
+     "shown_in": "coherence-v2",
+     "how": "a router table people write says which layers handle each kind of case"
+    },
+    {
+     "name": "filters",
+     "description": "lets through only what passes a test",
+     "shown_in": "paarakhi",
+     "how": "passes on only sound louder than the room"
+    },
+    {
+     "name": "assembles",
+     "description": "makes what a person sees from pieces written in advance",
+     "shown_in": "coherence-v2",
+     "how": "builds the picture from credited cutouts"
+    }
+   ]
+  },
+  {
+   "name": "code gives",
+   "group": "code",
+   "holds": "one",
+   "need": "optional",
+   "helps": "says what comes out of the code, which is what a person meets",
+   "description": "What comes out of the code. A step of plain code beside the NSMnum; each element names the NSMnum in ungli where code already does it.",
+   "elements": [
+    {
+     "name": "a decision",
+     "description": "one of a few outcomes set in advance",
+     "shown_in": "rai",
+     "how": "complete or not complete"
+    },
+    {
+     "name": "a name, or none",
+     "description": "who or what, from the text itself, or nobody",
+     "shown_in": "ram",
+     "how": "<doer> karega, or RAM bharose"
+    },
+    {
+     "name": "a flag for a person",
+     "description": "a mark that a person should look, never a lock",
+     "shown_in": "boardgame-clash",
+     "how": "a pair shown on the teacher's page, while the student may keep it"
+    },
+    {
+     "name": "something made from pieces written in advance",
+     "description": "a picture, a move or a line of text assembled by code",
+     "shown_in": "aadha",
+     "how": "code decides the dance from the marks"
+    },
+    {
+     "name": "the input, passed on",
+     "description": "the input, or part of it, handed to the next step",
+     "shown_in": "paarakhi",
+     "how": "sound loud enough to hear, handed to the spotter"
+    },
+    {
+     "name": "don't know, to a person",
+     "description": "the case no step could settle, handed to a person",
+     "shown_in": "rai",
+     "how": "an answer it cannot check counts as don't know"
+    }
+   ]
+  }
+ ],
+ "instances": [
+  {
+   "name": "ungli",
+   "url": "https://ungli.syntax.prayasabhinav.net",
+   "what": "a builder: design a task as steps of NSMnum (Narrow Small Models [numerating]) and plain code, and read beside each model what the nearest models already built were measured to do and what their records say to check. Its name is from ungli rakhna, to put a finger on the exact spot, which is all a model here does",
+   "links": []
+  }
+ ],
+ "described_entities": [
+  {
+   "name": "rai",
+   "url": "https://ungli.syntax.prayasabhinav.net/#rai"
+  },
+  {
+   "name": "RAM",
+   "url": "https://ungli.syntax.prayasabhinav.net/#ram"
+  },
+  {
+   "name": "Coherence v2",
+   "url": "https://ungli.syntax.prayasabhinav.net/#coherence-v2"
+  },
+  {
+   "name": "aadha",
+   "url": "https://ungli.syntax.prayasabhinav.net/#aadha"
+  },
+  {
+   "name": "Hoja's gaali scorer",
+   "url": "https://ungli.syntax.prayasabhinav.net/#hoja-scorer"
+  },
+  {
+   "name": "Hoja Paarakhi's word spotter",
+   "url": "https://ungli.syntax.prayasabhinav.net/#paarakhi"
+  },
+  {
+   "name": "Beam's thread model",
+   "url": "https://ungli.syntax.prayasabhinav.net/#beam-thread"
+  },
+  {
+   "name": "Beam's maze maker",
+   "url": "https://ungli.syntax.prayasabhinav.net/#beam-maze"
+  },
+  {
+   "name": "aankh-micholi, the poem chooser",
+   "url": "https://ungli.syntax.prayasabhinav.net/#chooser"
+  },
+  {
+   "name": "Decay of Meaning word-sign model",
+   "url": "https://ungli.syntax.prayasabhinav.net/#decay"
+  },
+  {
+   "name": "khatka",
+   "url": "https://ungli.syntax.prayasabhinav.net/#boardgame-clash"
+  }
+ ],
+ "small_tasks": [
+  {
+   "slug": "ta-bill",
+   "name": "A TA bill's journey dates",
+   "task": "A travel allowance bill in a government office is paid for the days the tour was sanctioned for; any other day needs a sanction of its own. The dates the claimant typed are checked against the sanction order.",
+   "steps": [
+    {
+     "kind": "nsm",
+     "does": "Points at each journey date in the claimant's typed journey details, or at nothing.",
+     "slots": {
+      "does": "points",
+      "reads": "a passage",
+      "answers with": "a span",
+      "starts from": "a pointing reader",
+      "learns from": "your own keys",
+      "runs on": "a small server"
+     },
+     "code": {
+      "code takes": "one NSMnum's answer",
+      "code does": "compares with a line",
+      "code gives": "a flag for a person"
+     },
+     "then": "Reads each date it was pointed at and compares it with the first and last day of the sanction order. A date outside them, or a bill where it pointed at nothing, goes to the accounts clerk."
+    }
+   ]
+  },
+  {
+   "slug": "gst-match",
+   "name": "Purchase invoices against GSTR-2B",
+   "task": "An accounts clerk claims input tax credit only on purchase invoices the suppliers have reported in their GSTR-1, so that they appear in GSTR-2B. Each invoice in the purchase register is matched with the GSTR-2B statement downloaded from the GST portal. No step needs a model.",
+   "steps": [
+    {
+     "kind": "code",
+     "does": "Matches each invoice in the purchase register with GSTR-2B by the supplier's GSTIN, the invoice number and the tax amount, and lists the ones that do not match for the clerk.",
+     "code": {
+      "code takes": "the input itself",
+      "code does": "looks up",
+      "code gives": "a flag for a person"
+     }
+    }
+   ]
+  },
+  {
+   "slug": "rti-transfer",
+   "name": "An RTI application sent to the right office",
+   "task": "Under Section 6(3) of the RTI Act, an application asking for information another public authority holds is transferred to that authority within five days. The application is read for which authority holds what it asks for.",
+   "steps": [
+    {
+     "kind": "nsm",
+     "does": "Chooses, from the office's list of public authorities, the one that holds what the application asks for, or none.",
+     "slots": {
+      "does": "chooses",
+      "reads": "a passage",
+      "answers with": "an item",
+      "starts from": "a multilingual encoder",
+      "learns from": "your own keys",
+      "runs on": "a small server"
+     },
+     "code": {
+      "code takes": "one NSMnum's answer",
+      "code does": "routes",
+      "code gives": "something made from pieces written in advance"
+     },
+     "then": "If it chose this office, the application goes into the register of the office's Public Information Officer (PIO). If it chose another authority, code fills in the transfer letter written in advance. If it chose none, the PIO reads it."
+    }
+   ]
+  },
+  {
+   "slug": "leave-attendance",
+   "name": "A leave application against the attendance minimum",
+   "task": "A student writes to ask for leave. Where the student's attendance would stay at or above the university's minimum, often 75 per cent of classes, the leave is recorded without anyone reading it.",
+   "steps": [
+    {
+     "kind": "nsm",
+     "does": "Points at the first and last day of the leave asked for, or at nothing.",
+     "slots": {
+      "does": "points",
+      "reads": "a passage",
+      "answers with": "a span",
+      "starts from": "a pointing reader",
+      "learns from": "your own keys",
+      "runs on": "a small server"
+     },
+     "code": {
+      "code takes": "one NSMnum's answer",
+      "code does": "compares with a line",
+      "code gives": "a decision"
+     },
+     "then": "Counts the classes on those days from the timetable. If the student's attendance stays at or above the minimum, the leave is recorded; if not, it goes to the faculty member. If it points at nothing, the application goes back to the student."
+    }
+   ]
+  }
+ ]
+}
